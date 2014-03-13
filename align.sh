@@ -9,7 +9,6 @@ REVERSE_FILE=P.cact_411_1M_R_trim.fastq
 ASSEMBLY_NAME=P.cact
 
 echo "Hash length is $HASH_LENGTH"
-echo "It's going well"
 
 velveth $WORK_DIR $HASH_LENGTH -fastq -shortPaired -separate $FORWARD_FILE $REVERSE_FILE 
 velvetg $WORK_DIR -long_mult_cutoff 1 -exp_cov 6 -ins_length 700 -cov_cutoff 2 -min_contig_lgth 750
